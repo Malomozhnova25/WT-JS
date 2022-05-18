@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8" />
+<head>
+      <title> 4 упражнение</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+<div id="cursor"></div>
+<script>
+$(document).mousemove(function(event) {
+  $("#cursor").text("Курсор сейчас в X: "+event.pageX+", Y: "+event.pageY);
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8" />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> 7 упражнение</title>
+</head>
+<style>
+  #buttons {
+    width: 600px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .button {
+    height: 60px;
+     font-size: 3em;
+     background-color: gray;
+  }
+.main {
+    padding: 10px 10px 10px 10px;
+  }
+  .zero {
+    grid-column: 1/4;
+  }
+	.calculator{
+    width: 700px;
+    height: 500px;
+    border: 2px solid black;
+    margin: 100px auto 0;
+    text-align: center;
+    border-radius: 15px;
+    background-color: gray;
+}
+
+
+  #input {
+    width: 585px;
+    padding-right: 10px;
+    font-size: 3em;
+    text-align: right;
+    height: 80px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: black;
+    border: 1px solid black;
+    background-color: #A5A5A5;
+  }
+</style>
+
+
+<body>
+    <div align="center" class="calculator"><br>
+        <img width="250px"  height="50px" src="https://watchtown.ru/upload/uf/86b/86bc964885c0337121088279b0b70c1c.svg">
+  <div align="center" class="main">
+    <div align="center" class="calc">
+      <input type="text" id="input">
+      <div id='buttons'>
+        <input type="button" value="C" class="button clear">
+        <input type="button" value="<" class="button remove">
+        <input type="button" value="/" class="button button-operator">
+        <input type="button" value="*" class="button button-operator">
+
+        <input type="button" value="7" class="button  button-num">
+        <input type="button" value="8" class="button button-num">
+        <input type="button" value="9" class="button  button-num">
+        <input type="button" value="-" class="button button-operator">
+
+        <input type="button" value="4" class="button button-num">
+        <input type="button" value="5" class="button button-num">
+        <input type="button" value="6" class="button button-num">
+        <input type="button" value="+" class="button button-operator">
+
+        <input type="button" value="1" class="button button-num">
+        <input type="button" value="2" class="button button-num">
+        <input type="button" value="3" class="button button-num">
+        <input type="button" value="=" class="button equal">
+        <input type="button" value="0" class="button button-num zero">
+        <input type="button" value="." class="button button-num ">
+      </div>
+    </div>
+  </div></div>
+</body>
+<script type="text/javascript" src="jquery-3.4.0.js"></script>
+<script>
+  $(".equal").click(
+    function () {
+      try {
+        if ($("#input").val()) {
+          $("#input").val(eval($("#input").val()))
+        } else {
+          return false
+        }
+      } catch (error) {
+        alert("Введите валидные значения")
+      }
+    })
+
+  $(".button-operator").click(function (item) {
+    $("#input").val($("#input").val() + item.target.value)
+  })
+
+
+  $(".button-num").click(function (item) {
+    $("#input").val($("#input").val() + item.target.value)
+  })
+
+  $(".clear").click(function () {
+    $("#input").val('')
+  })
+
+  $(".remove").click(function () {
+    $("#input").val($("#input").val().substring(0, $("#input").val().length - 1))
+  })
+</script>
+
+</html>

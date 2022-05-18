@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>    
+    <meta charset="utf-8" />
+      <title>1 упражнение</title>
+<script type="text/javascript">
+window.onload = function() {
+    var button = document.getElementById('input_button_bg_change');
+    var body = document.getElementsByTagName('body')[0];
+    var colors = ['blue', 'grey', 'black', 'white', 'red', 'green', '#aafda', '#FFcACC', 'rgb(142,111,110)'];
+    button.onclick = function() {
+        body.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+    };
+};
+</script>
+</head>
+<body align="center">
+    <input type="button" id="input_button_bg_change" value="Другой цвет"/>
+</body>
+</html>

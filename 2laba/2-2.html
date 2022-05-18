@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8" />
+      <title> 2 упражнение</title>
+<body>
+  <div>Ваше имя* <input type="text" id="namefield"></div><br>
+  <div>Пароль* <input type="password" id="passfield"></div><br>
+  <div>Подтверждение пароля* <input type="password" id="passfieldConfirm"></div><br>
+  <div>Email* <input type="text" id="emailfield"></div><br>
+  <div>Тема сообщения <input type="text" id="messagetopicfield"></div><br>
+  <div>Сообщение <input type="text" id="messagefield"></div><br>
+<button class="ok">Отправить</button>
+<button class="clear">Очистить</button>
+</body>
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    $(".ok").click(function(){
+		var checker = true;
+        if ($('#namefield').val() == '') {
+			$('#namefield').css('border-color', 'red');
+			checker = false;
+		}
+		else {
+			$('#namefield').css('border-color', '');
+		}
+		if ($('#passfield').val().length < 4 || $('#passfieldConfirm').val() != $('#passfield').val()) {
+			$('#passfield').css('border-color', 'red');
+			$('#passfieldConfirm').css('border-color', 'red');
+			checker = false;
+		}
+		else {
+			$('#passfield').css('border-color', '');
+			$('#passfieldConfirm').css('border-color', '');
+		}
+		if ($('#emailfield').val().length < 5 || !$('#emailfield').val().includes("@")) {
+			$('#emailfield').css('border-color', 'red');
+			checker = false;
+		}
+		else {
+			$('#emailfield').css('border-color', '');
+		}
+		if ($('#messagefield').val().length < 10 ) {
+			$('#messagefield').css('border-color', 'red');
+			checker = false;
+		}
+		else {
+			$('#messagefield').css('border-color', '');
+		}
+		if (checker == true){
+			alert("Данные отправлены!");
+		}
+        });
+		$(".clear").click(function(){
+			$('#namefield').val('');
+			$('#passfield').val('');
+			$('#passfieldConfirm').val('');
+			$('#emailfield').val('');
+			$('#messagetopicfield').val('');
+			$('#messagefield').val('');
+        });
+</script>

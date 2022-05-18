@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8" />
+<head>
+      <title> 3 упражнение</title>
+<style>
+#doge { width: 300px;
+	height: 200px; 
+	position: relative;
+}
+</style>
+</head>
+<img id="doge" src="https://pngimg.com/uploads/pacman/pacman_PNG6.png" >
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).on('keydown', function(e) {
+  switch (e.key) {
+
+    // перемещение влево
+    case "ArrowLeft":
+      $('#doge').animate({
+        left: "-=100px"
+      }, 'fast');
+      break;
+      // перемещение вверх
+    case "ArrowUp":
+      $('#doge').animate({
+        top: "-=100px"
+      }, 'fast');
+      break;
+      // перемещение вправо
+    case "ArrowRight":
+      $('#doge').animate({
+        left: "+=100px"
+      }, 'fast');
+      break;
+      // перемещение вниз
+    case "ArrowDown":
+      $('#doge').animate({
+        top: "+=100px"
+      }, 'fast');
+      break;
+  }
+});
+</script>

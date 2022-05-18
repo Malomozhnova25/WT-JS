@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8" />
+      <title> 6 упражнение</title>
+<body align="center">
+  <div>Pac Man был смоделирован по образцу пиццы?</div><br>
+  <div> <input type="radio" name="guitar" id="choice1"> Да</div><br>
+  <div> <input type="radio" name="guitar" id="choice2"> Нет</div><br>
+<button class="ok">Отправить результат</button><br><br>
+  Всего ответило - <input value="0" id="resultNum" style="width:30px;" readonly> чел.<br>
+  <input value="0" id="realResult1" style="width:30px;" readonly>% - Да
+  <input value="0" id="result1" type="hidden"><br>
+  <input value="0" id="realResult2" style="width:30px;" readonly>% - Нет
+  <input value="0" id="result2" type="hidden"><br>
+</body>
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    $(".ok").click(function(){
+	var totalNum=0;
+		for (var i=1;i<=2;i++){
+			totalNum=totalNum+parseInt($('#result'+i).val());
+		}
+		for (var i=1;i<=2;i++){
+			var radioIsChecked = $('#choice'+i).prop('checked');
+			if (radioIsChecked == true){
+				$('#result'+i).val((parseInt($('#result'+i).val())+1).toString());
+				totalNum++;
+				$('#resultNum').val(totalNum.toString());
+			}
+		}
+		for (var i=1;i<=2;i++){
+			$('#realResult'+i).val(Math.round((parseInt($('#result'+i).val())/totalNum*100)).toString());
+		}
+        });
+</script>

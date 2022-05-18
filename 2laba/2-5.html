@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8" />
+<head>
+      <title> 5 упражнение</title>
+<style>
+#doge {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  background-repeat: no-repeat;
+}
+</style>
+<div id="doge">
+<img width="150px"  height="100px" src="https://pngimg.com/uploads/pacman/pacman_PNG6.png">
+</div>
+</head>
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$("#doge").mousedown(function() {
+			$(this).mousemove(function() {
+				doge.style.left = event.pageX - doge.offsetWidth / 2 + 'px';
+				doge.style.top = event.pageY - doge.offsetHeight / 2 + 'px';
+			});
+		}).mouseup(function() {
+				$(this).unbind('mousemove');
+			});
+</script>

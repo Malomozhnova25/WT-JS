@@ -1,0 +1,463 @@
+* {
+	margin: 0; padding: 0;
+}
+body {
+	text-align: center;
+	font: 12px Verdana;
+	color: #333333;
+	background: #F7F6F6 url(images/background.gif) repeat-x 0 0;
+}
+a {
+	color: #003366;
+}
+a:hover {
+	text-decoration: none;
+	color: #ff0000;
+}
+img {
+	border: 0;
+}
+
+.break {
+	font-size: 0;
+	width: 0; height: 0;
+	clear: both;
+}
+.alignleft {
+	float: left;
+	margin: 4px 10px 5px 0;
+}
+.alignright {
+	float: right;
+	margin: 4px 0 5px 10px;
+}
+.aligncenter {
+	text-align: center;
+}
+.hidden {
+	display: none;
+}
+
+/** BEGIN wrapper **/
+#wrapper {
+	width: 980px;
+	margin: auto auto;
+	text-align: left;
+}
+/** END wrapper **/
+
+/** BEGIN header **/
+#header {
+	height: 200px;
+	margin-bottom: 15px;
+}
+	#header .pages {
+		list-style-type: none;
+		height: 39px;
+		padding-top: 3px;
+		float: center;
+	}
+		#header .pages li {
+			float: left;
+		}
+		#header .pages li a {
+			display: block;
+			font-size: 0.9em;
+			font-weight: bold;
+			text-transform: uppercase;
+			padding: 12px 15px;
+			text-decoration: none;
+		}
+		#header .pages li a:hover {
+			text-decoration: underline;
+		}
+	#header form {
+		width: 245px; height: 26px;
+		background: url(images/search.gif) no-repeat 0 8px;
+		float: right;
+		padding: 8px 30px 0 0;
+	}
+		#header form input {
+			border: 0;
+			float: left;
+			width: 170px;
+			margin: 5px;
+		}
+		#header form button {
+			border: 0;
+			text-indent: -9999px;
+			font-size: 0;
+			width: 60px; height: 26px;
+			float: right;
+			background-color: transparent;
+		}
+	#header .logo {
+		clear: both;
+		float: center;
+		padding: 30px 0 36px 20px;
+	}
+		#header .logo h1 {
+			font-size: 2em;
+			text-transform: uppercase;
+		}
+			#header .logo h1 a {
+				text-decoration: none;
+			}
+		#header .logo p {
+			color: #888888;
+			font-weight: bold;
+			font-size: 1.2em;
+			text-transform: uppercase;
+		}
+	#header .sponsor {
+		float: right;
+		padding: 25px 0;
+	}
+	#header .categories {
+		clear: both;
+		list-style-type: none;
+		height: 40px;
+		border-bottom: 5px solid #003366;
+		border-top: 1px solid #DDDDDD;
+		overflow: hidden;
+	}
+		#header .categories li {
+			float: left;
+		}
+		#header .categories li a {
+			display: block;
+			padding: 13px;
+			color: #333333;
+			border-right: 1px solid #dddddd;
+			text-decoration: none;
+		}
+		#header .categories li a:hover {
+			background-color: #003366;
+			color: #ffffff;
+		}
+/** END header **/
+
+/** BEGIN content **/
+#content {
+	width: 980px;
+	float: center;
+	padding-bottom: 10px;
+}
+	#featured {
+		border: 1px solid #DDDDDD;
+		padding: 10px;
+		margin-bottom: 10px;
+		height: 245px;
+	}
+		#featured .post {
+			padding: 10px;
+		}
+		#featured h2 {
+			font-size: 1.6em;
+			margin-bottom: 5px;
+		}
+			#featured h2 a {
+				text-decoration: none;
+			}
+		#featured .details {
+			font-size: 0.9em;
+			margin-bottom: 15px;
+			color: #888888;
+		}
+			#featured .details a {
+				color: #888888;
+				text-decoration: none;
+			}
+			#featured .details a:hover {
+				color: #003366;
+				text-decoration: underline;
+			}
+		#featured .thumb {
+			border: 1px solid #dddddd;
+			padding: 5px;
+			float: left;
+			margin: 0 10px 10px 0;
+		}
+			#featured .thumb a {
+				width: 300px; height: 175px;
+				display: block;
+				overflow: hidden;
+			}
+			#featured .thumb a img {
+				width: 300px;
+			}
+		#featured p {
+			line-height: 1.4em;
+			margin-bottom: 10px;
+		}
+		#featured .tags {
+			clear: both;
+			font-size: 0.9em;
+			color: #888888;
+			margin-bottom: 0;
+		}
+			#featured .tags a {
+				text-decoration: none;
+			}
+		#featured .readmore {
+			font-size: 0.8em;
+		}
+	#content .recent {
+		border: 1px solid #DDDDDD;
+	}
+		#content .recent .post {
+			padding: 15px;
+			clear: both;
+		}
+			#content .recent .post h2 {
+				font-size: 1.5em;
+				margin-bottom: 10px;
+			}
+				#content .recent .post h2 a {
+					text-decoration: none;
+				}
+			#content .recent .post img {
+				float: right;
+				padding: 5px;
+				border: 1px solid #DDDDDD;
+				background-color: #FFFFFF;
+				margin-left: 20px;
+			}
+			#content .recent .post p {
+				line-height: 1.4em;
+				margin-bottom: 10px;
+			}
+			#content .recent .post .readmore {
+				font-size: 0.8em;
+			}
+		#content .recent .o {
+			background-color: #EEEEEE;
+		}
+	#content {
+		
+	}
+/** END content **/
+
+
+/** BEGIN footer **/
+#footer {
+	clear: both;
+	background-color: #003366;
+	color: #ffffff;
+	font-size: 0.9em;
+	padding: 20px 10px;
+}
+	#footer a {
+		color: #ffffff;
+	}
+	#footer p {
+		width: 980px;
+		margin: auto auto;
+		text-align: left;
+	}
+/** END footer **/
+
+/** BEGIN miscellaneous **/
+#content .postnav {
+	clear: both;
+	padding: 10px 0;
+}
+	#content .postnav ul {
+		list-style-type: none;
+		padding: 10px;
+	}
+		#content .postnav ul li {
+			float: left;
+			color: #B5B4BC;
+			padding: 4px;
+		}
+		#content .postnav ul li a {
+			color: #636363;
+			text-decoration: none;
+			display: block;
+			padding: 2px 6px;
+			border: 1px solid #E2E2E2;
+		}
+		#content .postnav ul li a:hover {
+			border-color: #ffffff;
+		}
+		#wp_page_numbers ul {
+			border-top: 0 !important;
+		}
+		#wp_page_numbers .page_info {
+			padding: 3px 6px !important;
+			margin-right: 2px;
+			border: 1px solid #e0e0e0 !important;
+			margin-top: 4px;
+		}
+		#wp_page_numbers .active_page a {
+			background-color: #ffffff !important;
+			border: 0 !important;
+		}
+#content .single {
+	padding: 10px;
+}
+	#content .single h2 {
+		font-size: 1.5em;
+		margin-bottom: 10px;
+	}
+	#content .single p {
+		line-height: 1.5em;
+		margin-bottom: 10px;
+	}
+	#content .single ul, #content .single ol {
+		list-style-position: inside;
+		margin-bottom: 10px;
+	}
+	#content .single li {
+		line-height: 1.5em;
+		padding: 2px 0;
+	}
+	#content .single blockquote {
+		padding: 10px 10px 5px;
+		margin-bottom: 10px;
+		background-color: #eeeeee;
+		border-width: 1px 0;
+		border-style: solid;
+		border-color: #e0e0e0;
+	}
+	#content .single h3, #content .single h4, #content .single h5, #content .single h6 {
+		font-size: 1.2em;
+		margin-bottom: 5px;
+	}
+#comments {
+	padding: 10px;
+}
+	#comments h2 {
+		font-size: 1.5em;
+		margin-bottom: 10px;
+	}
+	#comments a {
+		text-decoration: none;
+	}
+	#comments p {
+		margin-bottom: 10px;
+		line-height: 1.6em;
+	}
+	#comments form {
+		
+	}
+	#comments form p {
+		margin-bottom: 5px;
+	}
+		#comments form input {
+			margin-right: 5px;
+		}
+		#comments form input, textarea {
+			border: 1px solid #cccccc;
+			font-size: 0.9em;
+			font-family: Verdana;
+			padding: 4px;
+			background-position: 4px 4px;
+			background-repeat: no-repeat;
+		}
+		#comments form input {
+			width: 240px;
+			border: 1px solid #cccccc;
+		}
+		#comments form textarea {
+			width: 350px;
+			padding: 4px 4px !important;
+			border: 1px solid #cccccc;
+		}
+		#comments form button {
+			border: 1px solid #a0a0a0;
+			font-size: 1em;
+			font-family: Verdana;
+			padding: 2px 6px;
+		}
+	.commentdetails {
+		margin-top: 25px;
+	}
+	.commentauthor {
+		margin-bottom: 5px !important;
+		font-weight: bold;
+	}
+	.commentdate {
+		font-size: 0.8em;
+		margin-bottom: 5px;
+		color: #909090;
+	}
+	.required {
+		color: #ff0000;
+	}
+h2.title {
+	font-size: 1em !important;
+	text-transform: uppercase;
+	padding: 10px;
+	color: #565656;
+}
+.notfound {
+	padding: 40px;
+}
+	.notfound h2 {
+		font-size: 18px;
+		font-weight: normal;
+		margin-bottom: 10px;
+	}
+
+/** END miscellaneous **/
+
+/** BEGIN wordpress 2.7 comments **/
+#comments ol {
+	list-style-type: none;
+	clear: both;
+	padding: 0;
+	margin: 0;
+}
+	#comments .buffer {
+		padding: 10px;
+	}
+	#comments ol li {
+		margin-bottom: 10px;
+	}
+	#comments ol li ul li {
+		border: 1px solid #e0e0e0;
+		padding: 10px;
+	}
+	#comments ol li .avatar {
+		float: right;
+	}
+	#comments ol li .comment-author {
+		
+	}
+		#comments ol li .comment-author .fn {
+			font-weight: bold;
+			font-size: 1.2em;
+		}
+	#comments ol li .comment-meta {
+		font-size: 0.9em;
+		color: #999999;
+		margin: 5px 0 10px;
+	}
+	#comments ol li .reply {
+		font-size: 0.9em;
+		font-weight: bold;
+		padding-bottom: 10px;
+	}
+	#comments .children {
+		list-style-type: none;
+	}
+#comments .navigation {
+	padding: 0 0 40px;
+	font-size: 0.9em;
+}
+	#comments .navigation a {
+		color: #999999;
+		padding: 3px 8px;
+		border: 1px solid #cccccc;
+	}
+	#comments .navigation a:hover {
+		color: #000000;
+		border-color: #000000;
+		text-decoration: none;
+	}
+#comments .says {
+	display: none;
+}
+/** END wordpress 2.7 comments **/
